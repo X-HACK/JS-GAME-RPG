@@ -41,11 +41,13 @@ commandWindow.setText(
   ]
 )
 
+// メインループ
 setInterval((event) => {
   ctx.clearRect(0, 0, 640, 480);
-  gameObjects.map(_ => _.update(event))
-}, 60);
+  gameObjects.forEach(_ => _.update(event))
+}, 60); // 60ミリ秒ごとに、全てのgameobjectを継承したクラスのupdateメソッドを呼んでいる
 
+// イベント登録
 window.addEventListener("keydown", (e) => {
   commandCursor.keyDown(e)
 })

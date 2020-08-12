@@ -7,7 +7,7 @@ class GameObject {
     }
     this.position = new Position(posX, posY);
     this.size = new Size(width, height);
-    this.dead = false
+    this.alive = true // 死活監視
 
     gameObjects.push(this)
   }
