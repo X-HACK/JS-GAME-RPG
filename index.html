@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/lib/GameObject.js"></script>
+  <script src="./assets/js/lib/TextObject.js"></script>
+  <script src="./assets/js/lib/MessageTextObject.js"></script>
+  <script src="./assets/js/lib/StatusTextObject.js"></script>
+  <script src="./assets/js/objects/MessageWindow.js"></script>
+  <script src="./assets/js/objects/HeroStatusWindow.js"></script>
+  <script src="./assets/js/objects/CommandWindow.js"></script>
+  <script src="./assets/js/objects/Cursor.js"></script>
+  <script src="./assets/js/objects/Character.js"></script>
   <script src="./assets/js/main.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
 </head>
+
 <body>
   <h1>RPG風戦闘シーンを作ろう</h1>
-  <canvas id="canvas" width="640" height="400">
+  <canvas id="canvas" width="640" height="480">
   </canvas>
+  <script>
+    const fontName = 'Press Start 2P';
+    // googleフォントを読み込み次第スタートメニューを表示
+    WebFont.load({
+      google: { families: [fontName] },
+      active: () => { }
+    });
+  </script>
 </body>
+
 </html>
